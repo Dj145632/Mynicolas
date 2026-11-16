@@ -1,0 +1,198 @@
+
+/* ========================================================
+   ESTILOS PERSONALIZADOS E VARIÁVEIS
+   ======================================================== */
+
+   :root {
+    --primary-color: #ed0101;
+    --danger-color: #ed0101;
+    --heading-color: #ffffff;
+    --text-muted: #b8b8b8;
+    --bg-soft: #151515;
+    --bg-dark: #080808;
+  }
+  
+  /* CORPO DA PÁGINA */
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #f0f0f0;
+    background-color: #080808;
+    scroll-behavior: smooth;
+  }
+  
+  /* ESPAÇAMENTO DAS SEÇÕES */
+  section {
+    padding: 90px 0;
+    scroll-margin-top: 75px;
+  }
+  
+  /* 1. BANNER / HERO */
+  .hero-section {
+    background: linear-gradient(
+      135deg,
+      #080808 0%,
+      #500000 60%,
+      #ed0101 100%
+    );
+    color: #ffffff;
+    padding: 100px 0 90px 0;
+  }
+  
+  /* LOGO DO BANNER */
+  .hero-logo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .hero-logo:hover {
+    transform: scale(1.04);
+  }
+  
+  /* 2. CARTÕES PERSONALIZADOS */
+  .custom-card {
+    background-color: #151515;
+    color: #ffffff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid #333333;
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 28px rgba(237, 1, 1, 0.15);
+    border-color: #ed0101;
+  }
+  
+  /* 3. GALERIA */
+  .gallery-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .gallery-img-wrapper img {
+    transition: transform 0.4s ease;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
+  
+  .custom-card:hover .gallery-img-wrapper img {
+    transform: scale(1.07);
+  }
+  
+  /* 4. MAPA RESPONSIVO */
+  .map-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 380px;
+    height: 100%;
+    border-radius: 16px;
+    border: 1px solid #333333;
+  }
+  
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
+  /* 5. LINHA DECORATIVA DOS TÍTULOS */
+  .section-divider {
+    width: 50px;
+    height: 3px;
+    background-color: var(--danger-color);
+    margin: 12px auto 0 auto;
+    border-radius: 4px;
+  }
+  
+  /* 6. LOCALIZAÇÃO */
+  #localizacao {
+    scroll-margin-top: 75px;
+  }
+
+/* MAPA ENCONTRE TRILHAS */
+
+#localizacao {
+  padding: 90px 0;
+  scroll-margin-top: 80px;
+}
+
+.trail-search {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 25px 0 12px;
+}
+
+.trail-search input {
+  flex: 1;
+  min-width: 200px;
+  padding: 14px;
+  background: #151515;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 8px;
+  outline: none;
+}
+
+.trail-search input:focus {
+  border-color: #ed0101;
+}
+
+.trail-search button {
+  padding: 14px 20px;
+  background: #ed0101;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.trail-search button:hover {
+  background: #b90000;
+}
+
+.trail-search .location-btn {
+  background: #292929;
+  border: 1px solid #ed0101;
+}
+
+#mapMessage {
+  color: #b8b8b8;
+  margin: 12px 0;
+}
+
+#trailMap {
+  width: 100%;
+  height: 450px;
+  min-height: 350px;
+  border: 2px solid #ed0101;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #151515;
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  #trailMap {
+    height: 350px;
+  }
+
+  .trail-search {
+    flex-direction: column;
+  }
+
+  .trail-search button {
+    width: 100%;
+  }
+}
+  
